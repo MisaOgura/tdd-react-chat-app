@@ -4,7 +4,7 @@
   "description": "TDD a chat app with Node, React and socket.io",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require setup.js test/*.spec.js"
+    "test": "mocha --require test/helpers/setup.js test/*.spec.js"
   },
   "author": "Misa Ogura",
   "license": "ISC",
@@ -22,6 +22,7 @@
     "express": "^4.15.2",
     "http": "0.0.0",
     "jsdom": "^9.11.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "socket.io-client": "^1.7.3"
   }
 }
