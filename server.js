@@ -10,12 +10,12 @@ const server = http.createServer(app)
 const io = require('socket.io').listen(server)
 
 io.on('connection', (socket) => {
-	console.log('client-server connection established')
+	console.log('client-server connection established!')
 	socket.on('client-data', (data) => {
-		console.log(data)
+		console.log('data from client-side received: ', data)
 	})
 })
 
 server.listen('3030', () => {
-	console.log('Express server listening on port 3030...')
+	console.log('express server listening on port 3030...')
 })
