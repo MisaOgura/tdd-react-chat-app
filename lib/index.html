@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TDD - React Chat App</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+	<script>
+		const socket = window.io('http://localhost:3030')
+		socket.emit('client-data', 'message from the client-side received')
+	</script>
+</head>
+
+<body>
+
+</body>
+</html>
