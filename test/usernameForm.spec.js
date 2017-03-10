@@ -2,20 +2,23 @@
 
 import React from 'react'
 import { expect } from 'chai'
-import { shallow, mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
-import usernameForm from '../lib/usernameForm'
+import UsernameForm from '../lib/usernameForm'
 
 describe.only('usernameForm -', () => {
 	
-	const testUsernameForm = mount(<usernameForm />)
+	const testUsernameForm = shallow(<UsernameForm />)
 	
 	it('should have a div with a className = usernameForm', () => {
-		console.log(testUsernameForm.html())
-		expect(testUsernameForm.find('.something')).to.have.length(1)
+  	expect(testUsernameForm.find('div').hasClass('usernameForm')).to.equal(true)
 	})
 	
-  // it('should have an input form', () => {
-  // 	expect(testUsernameForm.find('input').length).to.equal(1)
-  // })
+  it('should have an input form', () => {
+  	expect(testUsernameForm.find('input')).to.have.length(1)
+  })
 })
+
+// NB - the 1st letter of React component MUST be an uppercase as otherwise
+//      it's transformed into React.createElement('myComponent', ...)
+// https://github.com/facebook/react/issues/4695
