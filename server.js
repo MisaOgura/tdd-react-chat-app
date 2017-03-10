@@ -1,3 +1,5 @@
+'use strict'
+
 // While import is indeed part of ES6, it is unfortunately not
 // yet supported by any native environments, Node or browser.
 

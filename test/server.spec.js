@@ -1,5 +1,7 @@
-const chai = require('chai')
-const expect = chai.expect
+'use strict'
+
+import { expect } from 'chai'
+
 const port = '3030'
 const url = 'http://localhost:' + port
 
