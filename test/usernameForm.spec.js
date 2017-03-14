@@ -6,7 +6,7 @@ import { shallow } from 'enzyme'
 
 import UsernameForm from '../lib/usernameForm'
 
-describe.only('usernameForm -', () => {
+describe('usernameForm -', () => {
 	
 	const testUsernameForm = shallow(<UsernameForm />)
 	
